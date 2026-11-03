@@ -1,0 +1,270 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    font-family: monospace;
+    background-color: #324c43;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* SITE HEADER */
+.header {
+    position: sticky;
+    top: 0;
+    color: white;
+    background-color: #324c43;
+    border-bottom: 1px solid #1e352b;
+    padding: 1em;
+    z-index: 10;
+}
+
+header .nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+#new-note-form-btn {
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    border: 1px solid #2e5946;
+    background-color: #172a22;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+#new-note-form-btn:hover {
+    background-color: #213c30;
+    border-color: white;
+}
+
+/* SITE CONTENT */
+.site-content {
+    background-color: #0b1311;
+    flex: 1;
+    padding: 1em;
+}
+
+#notes-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+@media (min-width: 640px) {
+    #notes-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.5em;
+    }
+}
+
+@media (min-width: 1024px) {
+    #notes-container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2em;
+    }
+}
+
+.note {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.25em;
+    background-color: #13201b;
+    border: 1.5px solid #224235;
+    border-radius: 0.5em;
+    transition: border-color 0.2s ease;
+}
+
+.note:hover {
+    border-color: #10b981;
+}
+
+.note-title {
+    font-size: 1.5rem;
+    color: #6ee7b7;
+    margin-top: 0;
+}
+
+.note-body {
+    color: #94a3b8;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.note-delete-btn{
+    align-self: flex-end;
+    background: transparent;
+    border: none;
+    border-radius: 0.2em;
+    padding: 0.5em;
+    color: #c71313;
+}
+
+.note-delete-btn:hover{
+    background-color: white;
+}
+
+/* SITE FOOTER */
+.site-footer {
+    height: 10%;
+    padding: 1em;
+    text-align: center;
+    color: white;
+    background-color: #324c43;
+    border-top: 1px solid #1e352b;
+}
+
+/* NEW NOTE FORM */
+#note-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 1em;
+    flex: 1;
+}
+
+#note-form-container.hidden {
+    display: none;
+}
+
+#note-editor {
+    background-color: #13201b;
+    width: 100%;
+    max-width: 550px;
+    padding: 2em;
+    border-radius: 8px;
+    border: 2px solid #224235;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #d1fae5;
+}
+
+.form-group input, 
+.form-group textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.75em;
+    border: 1.5px solid #254437;
+    border-radius: 6px;
+    background-color: #0b1311;
+    color: #f1f5f9;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    width: 100%;
+}
+
+.form-group textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #10b981;
+    background-color: #0e1915;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+#submit-note-btn {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #10b981;
+    color: #042417;
+    border: none;
+    border-radius: 6px;
+    padding: 0.85em 1.5em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    align-self: flex-start;
+}
+
+#submit-note-btn:hover {
+    background-color: #34d399;
+    transform: translateY(-1px);
+}
+
+#submit-note-btn:active {
+    transform: translateY(0);
+}
+
+#submit-note-btn:disabled {
+    background-color: #1c3329;
+    color: #4b6357;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Feedback Status Message */
+#note-form-status {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+#note-form-status.success {
+    color: #34d399;
+}
+
+#note-form-status.error {
+    color: #f87171;
+}
+
+/* Note feed */
+.site-content.note-feed{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#note-feed-container{
+    flex: 1;
+    padding: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.note-feed {
+    font-size: 1.5rem;
+}

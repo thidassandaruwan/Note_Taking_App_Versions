@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js" defer></script>
+    <title>Notepad</title>
+</head>
+<body>
+    <header class="header">
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
+                <li>
+                    <a href="./index.html">
+                        <i class="fa-solid fa-house" aria-hidden="true"></i>
+                        Notepad
+                    </a>
+                </li>
+                <li>
+                    <a href="./noteFeed.html">
+                        <i class="fa-solid fa-rss" style="color: #ffffff;"></i>
+                        Note Feed
+                    </a>
+                </li>
+                <li>
+                    <button id="new-note-form-btn">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <span id="new-note-btn-txt">Create Note</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="site-content">
+        <div id="note-form-container" class="hidden">
+            <form id="note-editor">
+                <div class="form-group">
+                    <label for="note-title">Title</label>
+                    <input
+                        type="text"
+                        id="note-title"
+                        name="title"
+                        placeholder="Enter note title..."
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="note-body">Note Content</label>
+                    <textarea
+                        id="note-body"
+                        name="body"
+                        rows="6"
+                        placeholder="Write your note here..."
+                        required
+                    ></textarea>
+                </div>
+                <button id="submit-note-btn">Submit</button>
+                <p id="note-form-status" aria-live="polite"></p>
+            </form>
+        </div>
+
+        <div id="notes-container"></div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="copyright-date">2026</span> Unknown Developer. All rights reserved.</p>
+    </footer>
+</body>
+</html>

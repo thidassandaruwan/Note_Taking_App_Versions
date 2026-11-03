@@ -1,0 +1,47 @@
+[
+  {
+    "id": "09fd2fd7-3af0-4d05-a21d-5030aa3d3774",
+    "title": "Testing note updat",
+    "body": "I typed the title wrong!"
+  },
+  {
+    "id": "c8b3e944-7f12-429a-8e2b-2856db568b20",
+    "title": "Grocery List",
+    "body": "Almond milk, sourdough bread, cold brew, avocados, and Greek yogurt."
+  },
+  {
+    "id": "5f2d6e31-8c44-49ab-9e51-46271c77f0d4",
+    "title": "Node.js Stream Notes",
+    "body": "Remember that req.on('data') emits Buffer chunks. Collect them in an array and Buffer.concat() on 'end'."
+  },
+  {
+    "id": "a1e948f2-332d-4ef1-b5cb-31295f70d287",
+    "title": "Books to Read",
+    "body": "Designing Data-Intensive Applications, Clean Code, and Refactoring by Martin Fowler."
+  },
+  {
+    "id": "e4a28c11-9f93-41bb-a720-30f5a7702811",
+    "title": "Workout Routine - Day A",
+    "body": "Warmup 5 min. Barbell squats 3x5, Overhead press 3x5, Pull-ups 3x8. 15 min stretch."
+  },
+  {
+    "id": "7c61bf8a-6b45-4de3-9a3e-6a56e996f015",
+    "title": "SSE Research",
+    "body": "Ensure response headers set Cache-Control: no-cache, Content-Type: text/event-stream, and Connection: keep-alive."
+  },
+  {
+    "id": "7c61bf8a-6b45-4de3-9a3e-6a56e996f015",
+    "title": "SSE Research",
+    "body": "Ensure response headers set Cache-Control: no-cache, Content-Type: text/event-stream, and Connection: keep-alive."
+  },
+  {
+    "id": "7c61bf8a-6b45-4de3-9a3e-6a56e996f015",
+    "title": "SSE Research",
+    "body": "Ensure response headers set Cache-Control: no-cache, Content-Type: text/event-stream, and Connection: keep-alive."
+  },
+  {
+    "id": "7c61bf8a-6b45-4de3-9a3e-6a56e996f015",
+    "title": "SSE Research",
+    "body": "Ensure response headers set Cache-Control: no-cache, Content-Type: text/event-stream, and Connection: keep-alive."
+  }
+]

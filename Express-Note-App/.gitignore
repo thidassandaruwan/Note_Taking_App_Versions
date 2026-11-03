@@ -1,0 +1,56 @@
+# ==============================================================================
+# Dependency Directories (Crucial to ignore, as they are massive)
+# ==============================================================================
+node_modules/
+**/node_modules/
+
+# ==============================================================================
+# Environment Variables & Secrets (CRITICAL for security)
+# Never commit your MongoDB connection strings, JWT secrets, or API keys!
+# ==============================================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# ==============================================================================
+# Production / Build Directories
+# Ignored because these files are automatically generated during deployment
+# ==============================================================================
+build/
+dist/
+out/
+.next/
+
+# ==============================================================================
+# Logs and Runtime Diagnostics
+# ==============================================================================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ==============================================================================
+# Operating System Files
+# ==============================================================================
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ==============================================================================
+# Optional: IDE and Editor Files
+# ==============================================================================
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# .vscode/   <-- Uncomment if you don't want to sync your VS Code settings/extensions
